@@ -1,83 +1,96 @@
-console.log("Hello World!!!");
-console.log("Welcome to web development class");
+//nama : ELen. Gumabo
+
+//ARRAY EXERCISE
+console.log("----------ARRAY EXERCISE-------------");
+let people = ["Greg","Mary","Devon","James"];
+//console.log(people);
 
 
-//1.VARIABEL
-/*cara pendeklarasian variabel yang lama
-var nama = "Elen";
-*/
-
-/*cara baru 
-1. menggunakan let, nilai yang didalam variabel akan berubah
-*/
-let nama = "Elen";
-nama = "Josua";
-let usia = 21;
-usia = usia + 1;
-
-/*
-2. menggunakan const, nilai yang fix tidak bisa berubah
-*/
-//const usia = 21;
-//usia = 22, ini akan eror
-//contoh menggunakan operator
-
-
-console.log(nama);
-console.log(usia);
-
-/*aturan dalam penamaan variabel
-yaitu huruf awal pada kata pertama bisa menggunakan huruf kecil dan untuk 
-kata kedua dan seterusnya harus menggunakan huruf besar
-*/
-
-let namaDepan = "Elen";
-let namaBelakang ="Gumabo";
-console.log(namaDepan +" "+ namaBelakang); 
-
-//contoh type data int yang tidak memiliki nilai
-let alamat = "Paputungan";//type data bolean
-let apakahSudahMenikah = true;
-
-console.log(alamat);
-console.log(apakahSudahMenikah);
-
-//2.OPERATOR
-//kalau 1 = assigment operater
-//kalau 2 = relational opereter(loose equality)
-//console.log(10 == 10); -> menghasilkan tipe data bolean 'true'
-console.log(10 == '10');//kalau 2 = tidak mengecek type data
-console.log(10 ==='10');//kalau 3 = mengecek type data
-
-//Ternary Operator, seperti  if else
-const hasil = 11 % 2 === 0? "Genap" : " Ganjil";
-console.log("hasil = " + hasil);
-
-//3.FUNCTION
-//function declaration
-function ucapkanSalam(){
-    console.log("Hallo nama saya Elen Gumabo");
-}
-ucapkanSalam();//cara panggil fungsi
-
-//function Expretion->paling sering digunakan
-const ucapkanSalam2 = function(){
-    console.log("Hallo nama saya Elen Gumabo2");
-}
-ucapkanSalam2();//cara panggil fungsi
-
-//PARAMETER DAN ARGUMENT
-//parameter adalah data(input) yang didefinisikan didalam fungsi
-//argument adalah nilai yang dikirimkan saat kita panggil fungsi
-
-//parameter
-const menghitungLuasPersegiPanjang = function(panjang,lebar){
-    return panjang*lebar;
+//1
+for (let i=0; i<people.length; i++){
+    console.log(people[i]);
 };
 
-//argument
-console.log(menghitungLuasPersegiPanjang(10,5));
+console.log("               ");
+//2 
+people.forEach(function(item){
+    console.log(item)
+});
 
-//Global dan Local -> lingkup fungsi& lingkup blok
-    
+
+//3
+people.shift();
+console.log(people);
+
+//4
+people.pop();
+console.log(people);
+
+
+//5
+people.unshift("Matt");
+console.log(people);
+
+//6
+people.push("Elen");
+console.log(people);
+
+//7
+let removed = people.splice(1, 1);
+console.log(people);
+
+//8
+let newPeople = people.slice(0,2);
+//let oldPeople = people.slice(2);
+console.log(newPeople);
+//console.log("Old",oldPeople);
+
+//9
+people.splice(2);
+people.splice(2,0, "Elizabeth","Artie");
+console.log(people);
+
+//10
+let Bob = ["Bobi","Bebi"];
+let withBob = people.concat(Bob);
+console.log(withBob);
+
+
+//OBJECT EXERCISE
+console.log(" ");
+console.log(" ");
+console.log(" ");
+
+console.log("------------OBJECT EXERCISE------------");
+let programming = {
+    languages :["JavaScript","Phyton","Rubby"],
+    isChallenging : true,
+    isRewarding : true,
+    difficulty : 8
+};
+
+//1
+programming.languages[3] = "Go";
+console.log(programming);
+
+//2
+console.log("difficulty :", +programming['difficulty']-1);
+
+//3
+delete programming.isRewarding;
+console.log(programming);
+
+//4
+programming.isFun = true;
+console.log(programming);
+
+//5
+let languages = programming.map (function(item){
+    return item.languages;
+});
+console.log(languages);
+
+
+
+
 
